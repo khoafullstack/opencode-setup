@@ -1,0 +1,75 @@
+{
+  "filesystem": {
+    "type": "local",
+    "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "."],
+    "description": "File system operations MCP server"
+  },
+  "everything": {
+    "type": "local",
+    "command": ["npx", "-y", "@modelcontextprotocol/server-everything"],
+    "description": "Provides tools for searching and reading files, running processes, and more"
+  },
+  "sentry": {
+    "type": "remote",
+    "url": "https://mcp.sentry.dev/mcp",
+    "description": "Error tracking and performance monitoring"
+  },
+  "github": {
+    "type": "remote",
+    "url": "https://api.github.com/mcp",
+    "description": "GitHub integration for issues, PRs, and repositories"
+  },
+  "sqlite": {
+    "type": "local",
+    "command": [
+      "npx",
+      "-y",
+      "@modelcontextprotocol/server-sqlite",
+      "./data.db"
+    ],
+    "description": "SQLite database operations"
+  },
+  "puppeteer": {
+    "type": "local",
+    "command": ["npx", "-y", "@modelcontextprotocol/server-puppeteer"],
+    "description": "Browser automation using Puppeteer"
+  },
+  "brave-search": {
+    "type": "local",
+    "command": ["npx", "-y", "@modelcontextprotocol/server-brave-search"],
+    "description": "Web search using Brave Search API"
+  },
+  "slack": {
+    "type": "remote",
+    "url": "https://mcp.slack.com/mcp",
+    "description": "Slack messaging integration"
+  },
+  "exa": {
+    "type": "remote",
+    "url": "https://mcp.exa.ai/mcp",
+    "enabled": true,
+    "headers": {
+      "x-api-key": "164acdb1-e303-4deb-84bf-e2616bd832e8"
+    }
+  },
+  "context7": {
+    "type": "remote",
+    "url": "https://mcp.context7.com/mcp",
+    "headers": {
+      "Accept": "application/json, text/event-stream"
+    },
+    "enabled": true
+  },
+  "codebase-memory-mcp": {
+    "type": "local",
+    "command": [
+      "C:/Users/khoadev/AppData/Local/Programs/codebase-memory-mcp/codebase-memory-mcp.exe"
+    ],
+    "enabled": true
+  },
+  "codegraph": {
+    "type": "local",
+    "command": ["codegraph", "serve", "--mcp"],
+    "enabled": true
+  }
+}
